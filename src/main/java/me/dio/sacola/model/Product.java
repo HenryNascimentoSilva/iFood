@@ -23,10 +23,10 @@ public class Product {
 
   private String name;
 
-  private Double value;
+  private double unitaryValue;
 
   @Builder.Default
-  private Boolean availability = true;
+  private Boolean avaiable = true;
 
   @ManyToOne
   @JsonIgnore

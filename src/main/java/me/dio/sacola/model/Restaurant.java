@@ -23,9 +23,9 @@ public class Restaurant {
   private Long id;
 
   private String name;
+
   @OneToMany(cascade =
       CascadeType.ALL)
-
   private List<Product> menu;
 
   @Embedded
