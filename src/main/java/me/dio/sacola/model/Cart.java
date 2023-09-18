@@ -22,16 +22,20 @@ public class Cart {
 
   // primeira Key gerada automaticamente
   @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
+  @GeneratedValue(strategy =
+      GenerationType.AUTO)
   private Long id;
 
   // um cliente pode ter varios carts
-  @ManyToOne(fetch = FetchType.LAZY, optional = false)
+  @ManyToOne(fetch =
+      FetchType.LAZY,
+      optional = false)
   @JsonIgnore
   private Client client;
 
   // um item para vários clientes
-  @OneToMany(cascade = CascadeType.ALL)
+  @OneToMany(cascade =
+      CascadeType.ALL)
   private List<Item> itens;
 
   // valor total dos produtos no cart

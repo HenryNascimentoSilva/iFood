@@ -14,10 +14,14 @@ import lombok.NoArgsConstructor;
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @NoArgsConstructor
 public class Client {
+
   @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
+  @GeneratedValue(strategy =
+      GenerationType.AUTO)
   private Long id;
+
   private String username;
+
   @Embedded
   private Address address;
 }

@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 @Embeddable
 @NoArgsConstructor
 public class Address {
+
   private String cep;
   private String complement;
 }
