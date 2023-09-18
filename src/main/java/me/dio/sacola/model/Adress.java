@@ -1,4 +1,4 @@
 package me.dio.sacola.model;
 
-public class Sacola {
+public class Adress {
 }
