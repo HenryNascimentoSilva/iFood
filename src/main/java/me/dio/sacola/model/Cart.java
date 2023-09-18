@@ -1,13 +1,23 @@
 package me.dio.sacola.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import me.dio.sacola.enumeration.PaymentMethod;
 
 import java.util.List;
 
 // @ Entity representa um banco de dados
+@AllArgsConstructor
+@Builder
+@Data
 @Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+@NoArgsConstructor
 public class Cart {
 
   // primeira Key gerada automaticamente
@@ -29,7 +39,7 @@ public class Cart {
 
   // método de pagamento(dinheiro ou cartão)
   @Enumerated
-  private PaymentMethod payment;
+  private PaymentMethod PaymentMethod;
 
   private boolean closed;
 }
