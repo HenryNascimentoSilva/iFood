@@ -11,5 +11,5 @@ public class Client {
   private Long id;
   private String username;
   @Embedded
-  private Adress adress;
+  private Address address;
 }
